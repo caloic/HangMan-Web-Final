@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div id="hangman-container">
+        <h1>
+            Are you gonna drink lonely or with friends ?
+        </h1>
+    </div>
+
+    <div>
+        <form action="/3_drink_path_to_hangman">
+        <input type="submit" value="DRINK WITH FRIENDS" class="button">
+    </form>
+    </div>
+
+    <div>
+        <form action="/3_solodrink_path_to_hangman">
+        <input type="submit" value="DRINK LONELY" class="button">
+    </form>
+    </div>
+    
+    <style>
+         @font-face {
+            font-family: 'Rubik';
+            font-weight: 100;
+            src: url(/assets/css/RubikMonoOne-Regular.ttf);
+        }
+        body {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            background-image: url('/assets/css/background/photomode_14012024_004206.png');
+            background-position: center;
+            object-fit: cover;
+            background-size: 100%;
+        }
+
+        #hangman-container {
+            text-align: center;
+            font-size: 16px;
+            z-index: 100;
+            margin: auto;
+            display: block;
+            z-index: 15;
+            margin: center;
+            align-items: center;
+            color: white;
+            justify-content: center;
+            padding: 2%;
+            margin-bottom: 2%;
+            background-color: black;
+        }
+
+        h1 {
+            align-items: center;
+            color: white;
+            justify-content: center;
+            font-family: 'Rubik', sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+        }
+
+        :root {
+            --clr-neon: hsl(0, 0%, 0%);
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            font-size:25px;
+            height:90px;
+            width:500px;
+            cursor: pointer;
+            color: white;
+            border: var(--clr-neon) 3px solid;
+            background-color:var(--clr-neon);
+            border-radius: 0.25em;
+            text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+            box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+            transition:all 0.5s;
+            opacity: 0.9;
+            margin-bottom: 1%;
+            font-family: 'Rubik', sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+        }
+
+        .button:hover{
+            background-color:transparent;
+            color:#fff;
+        }
+    </style>
+</body>
+</html>

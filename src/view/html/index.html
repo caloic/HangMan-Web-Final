@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<div>
+    <h1>Hangman Game</h1>
+</div>
+<div id="hangman-container">
+    <img class="backgroundAbsolute" src="/assets/css/background/computer{{.Attempts}}.png">
+    <div class="backgroundBlack">
+
+    <div id="word-display">{{.WordDisplay}}</div>
+    <div id="guesses">Guessed Letters: {{.GuessedLetters}}</div>
+    <div id="attempts">Attempts Remaining: {{.Attempts}}</div>
+
+    <!-- Form -->
+    <form id="hangmanForm"   method="post" action="/">
+        <input type="hidden" name="selectedLetter">
+
+        <div>
+            <!-- Boutons de lettre -->
+            <button type="submit" class="button" name="A" value="A">A</button>
+            <button type="submit" class="button" name="B" value="B">B</button>
+            <button type="submit" class="button" name="C" value="C">C</button>
+            <button type="submit" class="button" name="D" value="D">D</button>
+            <button type="submit" class="button" name="E" value="E">E</button>
+            <button type="submit" class="button" name="F" value="F">F</button>
+            <button type="submit" class="button" name="G" value="G">G</button>
+            <button type="submit" class="button" name="H" value="H">H</button>
+            <button type="submit" class="button" name="I" value="I">I</button>
+            <button type="submit" class="button" name="J" value="J">J</button>
+            <button type="submit" class="button" name="K" value="K">K</button>
+            <button type="submit" class="button" name="L" value="L">L</button>
+            <button type="submit" class="button" name="M" value="M">M</button>
+            <button type="submit" class="button" name="N" value="N">N</button>
+            <button type="submit" class="button" name="O" value="O">O</button>
+            <button type="submit" class="button" name="P" value="P">P</button>
+            <button type="submit" class="button" name="Q" value="Q">Q</button>
+            <button type="submit" class="button" name="R" value="R">R</button>
+            <button type="submit" class="button" name="S" value="S">S</button>
+            <button type="submit" class="button" name="T" value="T">T</button>
+            <button type="submit" class="button" name="U" value="U">U</button>
+            <button type="submit" class="button" name="V" value="V">V</button>
+            <button type="submit" class="button" name="W" value="W">W</button>
+            <button type="submit" class="button" name="X" value="X">X</button>
+            <button type="submit" class="button" name="Y" value="Y">Y</button>
+            <button type="submit" class="button" name="Z" value="Z">Z</button>
+        </div>
+    </form>
+    <button class="buttonSNG" onclick="startGame()">New Game</button>
+</div>
+</div>
+
+<script>
+    // Récupérez les références des éléments avec JavaScript
+    var hangmanForm = document.getElementById('hangmanForm');
+
+    function startGame() {
+        window.location.href = "/restart";
+    }
+
+    // Ajoutez un gestionnaire d'événements pour le formulaire
+    hangmanForm.addEventListener('submit', function(event) {
+        // Empêchez le comportement par défaut du formulaire (rechargement de la page)
+        event.preventDefault();
+
+        // Obtenez la lettre du bouton cliqué
+        var selectedLetter = event.submitter.value;
+
+        // Mettez à jour le champ de saisie caché avec la lettre sélectionnée
+        document.querySelector('input[name="selectedLetter"]').value = selectedLetter;
+        hangmanForm.submit();
+    });
+</script>
+
+</body>
+</html>

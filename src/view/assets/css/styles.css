@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrer verticalement */
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    
+}
+
+#hangman-container {
+    padding: 20%;
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    justify-content: center ;
+    align-items: center;
+    z-index: 0;
+}
+
+#word-display {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#guesses {
+    margin: 10px 0;
+}
+
+#attempts {
+    margin: 10px 0;
+    text-align: center;
+    
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.buttonguess, .buttonSNG {
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    margin-top: 20px;
+    max-width: 300px;
+    width: 200px;
+}
+
+button {
+    margin-right: 12px;
+    margin-top: 25px;
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.button:disabled {
+    background-color: #dddddd; /* Couleur de fond grise pour les boutons désactivés */
+    color: #888888; /* Couleur du texte grise pour les boutons désactivés */
+    cursor: not-allowed; /* Curseur désactivé pour indiquer que le bouton est inactif */
+}
+
+button:hover {
+    background-color: #eb310b;
+    color: white;
+}
+
+#hangman-image {
+    max-width: 1000%;
+    align-self: flex-end;
+    margin-top: 20px;
+    margin-left: 400px;
+}
+
+.backgroundAbsolute {
+    position: absolute;
+    z-index: -1;
+}
+
+.backgroundBlack {
+    background-color: black;
+    margin: 2%;
+    opacity: 0.8;
+}
+
+/*
+#buttonchangecolor {
+    margin-right: 12px;
+    margin-top: 25px;
+    padding: 20px;
+    font-size: 25px
+}
+*/

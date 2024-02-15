@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+         @font-face {
+            font-family: 'Rubik';
+            font-weight: 100;
+            src: url(/assets/css/RubikMonoOne-Regular.ttf);
+        }
+
+        body {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            background-image: url('/assets/css/background/Choiceescape.png');
+            background-position: center;
+            object-fit: cover;
+            background-size: 100%;
+        }
+
+        #hangman-container {
+            text-align: center;
+            padding: 1%;
+            margin-bottom: 1%;
+            font-size: 16px;
+            z-index: 100;
+            color: white;
+            background-color: black;
+        }
+
+        :root {
+            --clr-neon: hsl(0, 0%, 0%);
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size:25px;
+            height:60px;
+            width:200px;
+            cursor: pointer;
+            color: white;
+            border: var(--clr-neon) 3px solid;
+            background-color:var(--clr-neon);
+            border-radius: 0.25em;
+            text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+            box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+            transition:all 0.5s;
+            opacity: 0.9;
+            font-family: 'Rubik', sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+        }
+
+        .button:hover{
+            background-color:transparent;
+            color:#fff;
+        }
+
+        .flexDirection {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .marginRight {
+            margin-right: 2%;
+        }
+
+        h1 {
+            font-family: 'Rubik', sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="hangman-container">
+        <h1> Which exctraction vehicule are u choosing ? </h1>
+    </div>
+
+    <div class="flexDirection">
+    <div class="marginRight">
+        <form action="/mustang_path">
+        <input type="submit" value="MUSTANG" class="button">
+    </form>
+    </div>
+
+    <div class="marginRight">
+        <form action="/motorbike_path">
+        <input type="submit" value="MOTORBIKE" class="button">
+    </form>
+    </div>
+
+    <div>
+        <form action="/subway_path">
+        <input type="submit" value="SUBWAY" class="button">
+    </form>
+    </div>
+    </div>
+
+</body>
+</html>
